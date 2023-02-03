@@ -121,7 +121,7 @@ export default function History() {
               );
             })}
         </SimpleGrid>
-        {getHistory.data && (
+        {getHistory.data && totalPrompts / 5 >= 2 ? (
           <Center sx={{ marginTop: "0.4rem" }}>
             <Pagination
               page={page}
@@ -129,7 +129,7 @@ export default function History() {
               total={totalPrompts / 5}
             />
           </Center>
-        )}
+        ) : null}
       </Container>
     </>
   );
