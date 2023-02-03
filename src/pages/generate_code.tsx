@@ -49,7 +49,7 @@ export default function CodeGenerator() {
   return (
     <>
       <Head>
-        <title>Code Generator</title>
+        <title>Rad | Generate Code</title>
       </Head>
 
       <Container>
