@@ -121,12 +121,12 @@ export default function History() {
               );
             })}
         </SimpleGrid>
-        {getHistory.data && totalPrompts / 5 >= 2 ? (
+        {getHistory.data && (Math.ceil(totalPrompts / 5)) >= 2 ? (
           <Center sx={{ marginTop: "0.4rem" }}>
             <Pagination
               page={page}
               onChange={setPage}
-              total={totalPrompts / 5}
+              total={Math.ceil(totalPrompts / 5)}
             />
           </Center>
         ) : null}
