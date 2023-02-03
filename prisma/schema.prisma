@@ -63,7 +63,7 @@ model Prompt {
     userId    String
     prompt    String
     language  String
-    code      String
+    code      String    @db.Text
     createdAt DateTime
     user      User     @relation(fields: [userId], references: [id])
 }
