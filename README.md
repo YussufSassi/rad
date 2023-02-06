@@ -1,28 +1,49 @@
-# Create T3 App
+# Rad
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Rad is an AI-Powered code generation website. It's powered by OpenAI's Codex model and allows you to generate code in JavaScript, Python, C++ and Go.
 
-## What's next? How do I make an app with this?
+## Tech Stack
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+This project uses the T3 Stack, specifically these packages:
+* NextJS
+* Prisma (With a mysql/sqlite DB)
+* Next-Auth
+* tRCP
+* Mantine UI
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Setting it up
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+Copy `.env.example` and fill it with the required info.
 
-## Learn More
+```shell
+cp .env.example .env
+```
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+* You can create your OPEN_AI_SECRET_KEY at https://platform.openai.com/account/api-keys
+* Discord client id and client secret can be created at https://discord.com/developers/. Make sure you setup the correct callback URL, it should look like this: http://{domain}/api/auth/callback/discord (example: http://localhost:3000/api/auth/callback/discord)
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+### Install the dependencies
+```
+npm install
+```
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+### Set up the DB
 
-## How do I deploy this?
+*Note: Has to be run **after** you set up your env file, specifically the DATABASE_URL key*
+```
+npm run postinstall
+```
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+### Starting the development server
+```
+npm run dev
+```
+### Build for production
+```
+npm run build
+```
+
+### Starting the production server
+```
+npm start
+```
