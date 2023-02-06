@@ -1,4 +1,5 @@
 # Rad
+[![Node.js Deploy](https://github.com/YussufSassi/rad/actions/workflows/node.js.yml/badge.svg)](https://github.com/YussufSassi/rad/actions/workflows/node.js.yml)
 
 Rad is an AI-Powered code generation website. It's powered by OpenAI's Codex model and allows you to generate code in JavaScript, Python, C++ and Go.
 
